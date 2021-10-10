@@ -10,12 +10,8 @@ namespace Task2_DoWhile
     {
         static void Main(string[] args)
         {
-            /*
-            Осуществить ввод последовательности целых чисел и сравнить, что больше, количество положительных или количество отрицательных.
-            Последовательность потенциально не ограничена, окончанием последовательности служит число 0.
-            */
-
-
+            /* Осуществить ввод последовательности целых чисел и сравнить, что больше, количество положительных или количество отрицательных.
+            Последовательность потенциально не ограничена, окончанием последовательности служит число 0.*/
             int Number;
             int negativeNumber = 0;
             int positiveNumber = 0;
@@ -24,25 +20,25 @@ namespace Task2_DoWhile
                 Number = Convert.ToInt16(Console.ReadLine());
 
                 int mNumber = Math.Abs(Number);
-                int x = Number*mNumber;
+                int x = Number * mNumber;
 
 
-               int  v = (x < 0) ? negativeNumber++:0;
-               int y = (x > 0) ? positiveNumber++:0;
+                int v = (x < 0) ? negativeNumber++ : 0;
+                int y = (x > 0) ? positiveNumber++ : 0;
 
             } while (Number != 0);
 
             if (negativeNumber > positiveNumber)
             {
-                Console.WriteLine("Отрицательных чисел равно {0} и их больше чем положительных {1}.", negativeNumber, positiveNumber);
+                Console.WriteLine("Количество отрицательных чисел = {0} и их больше чем положительных, которых = {1}.", negativeNumber, positiveNumber);
             }
             else if (positiveNumber > negativeNumber)
             {
-                Console.WriteLine("Положительных чисел равно {1} и их больше чем отрицательных {0}.", negativeNumber, positiveNumber);
+                Console.WriteLine("Количество положительных чисел = {1} и их больше чем отрицательных, которых = {0}.", negativeNumber, positiveNumber);
             }
             else
             {
-                Console.WriteLine("Количество отрицательных чисел равно количеству положительных чисел и их общее количество равняется {0}.", negativeNumber + positiveNumber);
+                Console.WriteLine("Количество отрицательных чисел равно количеству положительных чисел и их общее количество = {0}.", negativeNumber + positiveNumber);
             }
             Console.ReadKey();
 
